@@ -6,7 +6,7 @@ console.log('Number of categories:', categoryItems.length);
 categoryItems.forEach(item => {
   if (item.nodeType === 1) { // Check if the node is an element node
     const categoryTitle = item.firstElementChild.textContent;
-    const categoryElements = item.querySelectorAll('li').length;
+    const categoryElements = item.lastElementChild.children.length;
 
     console.log('Category:', categoryTitle);
     console.log('Elements:', categoryElements);
